@@ -1,14 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-  let navLinks = document.querySelectorAll('.navbar-center>ul>li>a');
-  let dropdown = document.querySelectorAll('.dropdown>ul>li>a')
+const navLinks = ['Home', 'About', 'Destination', 'Search'];
+const menubar = document.getElementsByClassName('menu-child');
+const menubarClass = [' menu menu-sm dropdown-content mt-3 z-10 p-2 shadow rounded-box ', ' menu menu-horizontal px-1 '];
+let i=0;
 
-  navLinks.forEach(function(n) {
-    n.classList.add('text-center', 'text-gray-950', 'text-opacity-70', 'text-lg', 'font-medium')
-    n.style.fontFamily='Raleway';
-  });
-  dropdown.forEach(function(d) {
-    d.classList.add('text-center', 'text-gray-950', 'text-opacity-70', 'text-lg', 'font-medium')
-    d.style.fontFamily='Raleway';
-  });
-    
-});
+
+for (const menu of menubar) {
+  for (const navLink of navLinks) {
+    menu.innerHTML += `
+    <li><a class="text-opacity-70 text-lg font-medium font-['Raleway']">${navLink}</a></li>
+    `
+  }
+  menu.classList += menubarClass[i++];
+  menu.classList.add('border', 'border-black')
+  
+}

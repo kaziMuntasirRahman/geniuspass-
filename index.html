@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GeniusPass Pro</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>GeniusPass+</title>
 </head>
+
 <body>
-  <header></header>
+  <header class="lg:px-32 py-6 lg:py-12">
+    <nav class="mx-10 lg:mx-0">
+      <div class="navbar">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <img src="images/icons/menu.png" class="h-5">
+            </div>
+            <ul tabindex="0"
+              class="menu-child">
+              <!-- this section is develop and designed in js dynamically -->
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">GeniusPass+</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu-child">
+            <!-- this section is develop and designed in js dynamically -->
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn">Button</a>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main></main>
   <footer></footer>
+  <script src="js/nav.js"></script>
 </body>
+
 </html>
